@@ -59,14 +59,20 @@ module.exports = {
     return result;
   },
 
+  deleteTaskList: ({ currentTaskTableKey }) => {
+    const storedList = util.getStoredList(lmsListLocation);
+
+    delete storedList[currentTaskTableKey];
+
+    util.saveFile(storedList, lmsListLocation);
+  },
+
   getAllTaskList: () => {
     return JSON.parse(fs.readFileSync(lmsListLocation, env.fileEncoding));
   },
 
   getTaskList: ({ currentTaskTableKey, searchKey, searchWord }) => {
-    const storedList = JSON.parse(
-      fs.readFileSync(lmsListLocation, env.fileEncoding)
-    );
+    const storedList = util.getStoredList(lmsListLocation);
 
     return storedList[currentTaskTableKey]["table"].filter((v) =>
       searchKey && searchWord
@@ -76,11 +82,7 @@ module.exports = {
   },
 
   getResolvedTaskList: ({ currentTaskTableKey, searchKey, searchWord }) => {
-    console.log(currentTaskTableKey);
-
-    const storedList = JSON.parse(
-      fs.readFileSync(lmsListLocation, env.fileEncoding)
-    );
+    const storedList = util.getStoredList(lmsListLocation);
 
     return storedList[currentTaskTableKey]["table"].filter((v) =>
       searchKey && searchWord
@@ -90,59 +92,33 @@ module.exports = {
   },
 
   saveTaskList: ({ tableName, data }) => {
-    const storedList = JSON.parse(
-      fs.readFileSync(lmsListLocation, env.fileEncoding)
-    );
+    const storedList = util.getStoredList(lmsListLocation);
 
     storedList[tableName] = {};
     storedList[tableName]["table"] = data;
     storedList[tableName]["createdAt"] = util.formatedTimestamp();
 
-    fs.writeFileSync(
-      lmsListLocation,
-      JSON.stringify(storedList, null, 2),
-      env.fileEncoding
-    );
-
-    return "success";
+    util.saveFile(storedList, lmsListLocation);
   },
 
   submitTask: ({ key, currentTaskTableKey }) => {
-    console.log(key, currentTaskTableKey);
-
-    const storedList = JSON.parse(
-      fs.readFileSync(lmsListLocation, env.fileEncoding)
-    );
-
-    console.log(storedList[currentTaskTableKey]["table"]);
+    const storedList = util.getStoredList(lmsListLocation);
 
     storedList[currentTaskTableKey]["table"].find(
       (v) => v.key === key
     ).taskStatus = true;
 
-    fs.writeFileSync(
-      lmsListLocation,
-      JSON.stringify(storedList, null, 2),
-      env.fileEncoding
-    );
+    util.saveFile(storedList, lmsListLocation);
   },
 
   writeTaskContent: ({ key, currentTaskTableKey, taskContent }) => {
-    console.log(key, taskContent, currentTaskTableKey);
-
-    const storedList = JSON.parse(
-      fs.readFileSync(lmsListLocation, env.fileEncoding)
-    );
+    const storedList = util.getStoredList(lmsListLocation);
 
     storedList[currentTaskTableKey]["table"].find(
       (v) => v.key === key
     ).taskContent = taskContent;
 
-    fs.writeFileSync(
-      lmsListLocation,
-      JSON.stringify(storedList, null, 2),
-      env.fileEncoding
-    );
+    util.saveFile(storedList, lmsListLocation);
   },
 
   checkDuplicateTableName: ({ value }) => {

@@ -10,6 +10,12 @@ router.post("/generateTaskList", async (req, res) => {
   res.send(result);
 });
 
+router.post("/deleteTaskList", async (req, res) => {
+  const result = await action.deleteTaskList(req.body);
+
+  res.send(result);
+});
+
 router.post("/getTaskList", async (req, res) => {
   const result = await action.getTaskList(req.body);
 

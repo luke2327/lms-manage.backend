@@ -1,3 +1,6 @@
+const env = require("../config/env");
+const fs = require("fs");
+
 module.exports = {
   randomProperty: (obj) => {
     const keys = Object.keys(obj);
@@ -21,5 +24,17 @@ module.exports = {
     const time = d.toTimeString().split(" ")[0];
 
     return `${date}${onlyDate ? "" : " " + time}`;
+  },
+
+  saveFile: (storedList, location) => {
+    fs.writeFileSync(
+      location,
+      JSON.stringify(storedList, null, 2),
+      env.fileEncoding
+    );
+  },
+
+  getStoredList: (location) => {
+    return JSON.parse(fs.readFileSync(location, env.fileEncoding));
   },
 };

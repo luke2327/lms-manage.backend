@@ -1,34 +1,61 @@
 {
-  "test": {
+  "sssss": {
     "table": [
       {
         "key": 1,
-        "subjectName": "자료구조응용및실습",
-        "subjectKey": "dataStructureApplication",
-        "professorName": "손기봉교수님",
-        "taskName": "과제 #5 트리 탐색 응용",
+        "subjectName": "확률과통계",
+        "subjectKey": "probabilityAndStatistics",
+        "professorName": "이은경교수님",
+        "taskName": "3 - 벡터 연습문제",
         "taskDesc": [
-          "연결리스트 기반으로 변형하여 보세요"
+          "수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다."
         ],
         "taskStatus": true,
-        "dueDate": "2020-07-03",
-        "taskContent": "Test"
+        "dueDate": "2020-07-02",
+        "taskContent": "123"
       },
       {
         "key": 2,
-        "subjectName": "자료구조응용및실습",
-        "subjectKey": "dataStructureApplication",
-        "professorName": "손기봉교수님",
-        "taskName": "과제 #4 트리 탐색 기초",
+        "subjectName": "웹프로그래밍",
+        "subjectKey": "webPrograming",
+        "professorName": "정진우교수님",
+        "taskName": "과제 #4  (3, 4주차)",
         "taskDesc": [
-          "수업에 배운 배열 프로그램을 바탕으로 트리탐색프로그램을 만들어보세요"
+          "과제 내용은 첨부파일 및 과제04 참고 동영상 참고하세요.",
+          "기획 PPT와 과제 작성에 활용된 모든 파일들을 압축하여 제출하세요."
         ],
         "taskStatus": true,
-        "dueDate": "2020-07-01",
-        "taskContent": "sdfsdf"
+        "dueDate": "2020-06-29",
+        "taskContent": "123123"
       },
       {
         "key": 3,
+        "subjectName": "자료구조",
+        "subjectKey": "dataStructure",
+        "professorName": "윤현주교수님",
+        "taskName": "실습과제 #4 이진트리",
+        "taskDesc": [
+          "수업시간에 배운 이진트리를 바탕으로 실습문제를 해결하여 제출합니다."
+        ],
+        "taskStatus": true,
+        "dueDate": "2020-07-01",
+        "taskContent": "asdf"
+      },
+      {
+        "key": 4,
+        "subjectName": "c프로그래밍",
+        "subjectKey": "cPrograming",
+        "professorName": "황준하교수님",
+        "taskName": "이차원 배열 프로그래밍",
+        "taskDesc": [
+          "수업시간에 배운 이차원배열을 바탕으로 실습문제를 해결하여 제출합니다."
+        ],
+        "taskStatus": true,
+        "dueDate": "2020-06-29",
+        "taskContent": "123"
+      },
+      {
+        "key": 5,
         "subjectName": "웹프로그래밍",
         "subjectKey": "webPrograming",
         "professorName": "정진우교수님",
@@ -37,33 +64,8 @@
           "과제 내용은 첨부파일 및 과제05 참고 동영상 참고하세요.",
           "기획 PPT와 과제 작성에 활용된 모든 파일들을 압축하여 제출하세요."
         ],
-        "taskStatus": true,
-        "dueDate": "2020-06-26",
-        "taskContent": "Test"
-      },
-      {
-        "key": 4,
-        "subjectName": "이산수학",
-        "subjectKey": "discreteMathematics",
-        "professorName": "이은경교수님",
-        "taskName": "4주차 연습문제",
-        "taskDesc": [
-          "수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다."
-        ],
         "taskStatus": false,
-        "dueDate": "2020-07-02"
-      },
-      {
-        "key": 5,
-        "subjectName": "자료구조",
-        "subjectKey": "dataStructure",
-        "professorName": "윤현주교수님",
-        "taskName": "실습과제 #4 이진트리",
-        "taskDesc": [
-          "수업시간에 배운 이진트리를 바탕으로 실습문제를 해결하여 제출합니다."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-07-04"
+        "dueDate": "2020-06-28"
       },
       {
         "key": 6,
@@ -77,141 +79,9 @@
           "과제양식은 기존에 주어졌던 양식을 사용하시기 바랍니다."
         ],
         "taskStatus": false,
-        "dueDate": "2020-07-03"
-      },
-      {
-        "key": 7,
-        "subjectName": "확률과통계",
-        "subjectKey": "probabilityAndStatistics",
-        "professorName": "이은경교수님",
-        "taskName": "3 - 벡터 연습문제",
-        "taskDesc": [
-          "수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-06-26"
-      },
-      {
-        "key": 8,
-        "subjectName": "웹프로그래밍",
-        "subjectKey": "webPrograming",
-        "professorName": "정진우교수님",
-        "taskName": "과제 #4  (3, 4주차)",
-        "taskDesc": [
-          "과제 내용은 첨부파일 및 과제04 참고 동영상 참고하세요.",
-          "기획 PPT와 과제 작성에 활용된 모든 파일들을 압축하여 제출하세요."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-07-03"
+        "dueDate": "2020-07-02"
       }
     ],
-    "createdAt": "2020-06-25 17:02:38"
-  },
-  "test2": {
-    "table": [
-      {
-        "key": 1,
-        "subjectName": "자료구조",
-        "subjectKey": "dataStructure",
-        "professorName": "윤현주교수님",
-        "taskName": "실습과제 #4 이진트리",
-        "taskDesc": [
-          "수업시간에 배운 이진트리를 바탕으로 실습문제를 해결하여 제출합니다."
-        ],
-        "taskStatus": true,
-        "dueDate": "2020-06-25",
-        "taskContent": "Test222\n\n\nTest\n\n\nTest\n"
-      },
-      {
-        "key": 2,
-        "subjectName": "자료구조응용및실습",
-        "subjectKey": "dataStructureApplication",
-        "professorName": "손기봉교수님",
-        "taskName": "과제 #5 트리 탐색 응용",
-        "taskDesc": [
-          "연결리스트 기반으로 변형하여 보세요"
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-07-02"
-      },
-      {
-        "key": 3,
-        "subjectName": "이산수학",
-        "subjectKey": "discreteMathematics",
-        "professorName": "이은경교수님",
-        "taskName": "4주차 연습문제",
-        "taskDesc": [
-          "수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-07-03"
-      },
-      {
-        "key": 4,
-        "subjectName": "디지털공학실험",
-        "subjectKey": "digitalEngineering",
-        "professorName": "조새한교수님",
-        "taskName": "3초과코드 변환기 프로그래밍 by vhdl",
-        "taskDesc": [
-          "강의내용을 참고하여 BCD-3초과 코드를 구현하시오.",
-          "회로도와 타이밍도, 소스코드는 반드시 포함해야 됩니다.",
-          "과제양식은 기존에 주어졌던 양식을 사용하시기 바랍니다."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-07-02"
-      },
-      {
-        "key": 5,
-        "subjectName": "디지털공학실험",
-        "subjectKey": "digitalEngineering",
-        "professorName": "조새한교수님",
-        "taskName": "BCD2421 코드 변환기 프로그래밍 by vhdl",
-        "taskDesc": [
-          "강의내용을 참고하여 BCD2421 코드를 구현하시오.",
-          "회로도와 타이밍도, 소스코드는 반드시 포함해야 됩니다.",
-          "과제양식은 기존에 주어졌던 양식을 사용하시기 바랍니다."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-06-26"
-      },
-      {
-        "key": 6,
-        "subjectName": "웹프로그래밍",
-        "subjectKey": "webPrograming",
-        "professorName": "정진우교수님",
-        "taskName": "과제 #4  (3, 4주차)",
-        "taskDesc": [
-          "과제 내용은 첨부파일 및 과제04 참고 동영상 참고하세요.",
-          "기획 PPT와 과제 작성에 활용된 모든 파일들을 압축하여 제출하세요."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-06-30"
-      },
-      {
-        "key": 7,
-        "subjectName": "자료구조응용및실습",
-        "subjectKey": "dataStructureApplication",
-        "professorName": "손기봉교수님",
-        "taskName": "과제 #4 트리 탐색 기초",
-        "taskDesc": [
-          "수업에 배운 배열 프로그램을 바탕으로 트리탐색프로그램을 만들어보세요"
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-07-01"
-      },
-      {
-        "key": 8,
-        "subjectName": "확률과통계",
-        "subjectKey": "probabilityAndStatistics",
-        "professorName": "이은경교수님",
-        "taskName": "3 - 벡터 연습문제",
-        "taskDesc": [
-          "수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다."
-        ],
-        "taskStatus": false,
-        "dueDate": "2020-06-26"
-      }
-    ],
-    "createdAt": "2020-06-25 18:14:00"
+    "createdAt": "2020-06-25 23:12:06"
   }
 }
