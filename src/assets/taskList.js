@@ -1,16 +1,14 @@
 module.exports = {
-  cPrograming: [
-    {
+  cPrograming: [{
       title: '이차원 배열 프로그래밍',
       desc: ['수업시간에 배운 이차원배열을 바탕으로 실습문제를 해결하여 제출합니다.']
     },
-    { 
+    {
       title: '반복문과 조건문 프로그래밍',
       desc: ['수업시간에 배운 조건문과 반복문을 바탕으로 실습문제를 해결하여 제출합니다.']
     }
   ],
-  digitalEngineering: [
-    {
+  digitalEngineering: [{
       title: 'BCD2421 코드 변환기 프로그래밍 by vhdl',
       desc: [
         '강의내용을 참고하여 BCD2421 코드를 구현하시오.',
@@ -27,8 +25,7 @@ module.exports = {
       ]
     }
   ],
-  dataStructure: [
-    {
+  dataStructure: [{
       title: '실습과제 #3 연결리스트',
       desc: ['수업시간에 배운 연결리스트를 바탕으로 실습문제를 해결하여 제출합니다.']
     },
@@ -37,8 +34,7 @@ module.exports = {
       desc: ['수업시간에 배운 이진트리를 바탕으로 실습문제를 해결하여 제출합니다.']
     },
   ],
-  dataStructureApplication: [
-    {
+  dataStructureApplication: [{
       title: '과제 #4 트리 탐색 기초',
       desc: ['수업에 배운 배열 프로그램을 바탕으로 트리탐색프로그램을 만들어보세요']
     },
@@ -47,8 +43,7 @@ module.exports = {
       desc: ['연결리스트 기반으로 변형하여 보세요']
     },
   ],
-  javaPrograming: [
-    {
+  javaPrograming: [{
       title: '실습과제 #3 반복과 배열',
       desc: ['수업시간에 배운 반복과 배열을 바탕으로 실습문제를 해결하여 제출합니다.']
     },
@@ -57,8 +52,7 @@ module.exports = {
       desc: ['수업시간에 배운 클래스와 객체개념을 바탕으로 실습문제를 해결하여 제출합니다.']
     }
   ],
-  webPrograming: [
-    {
+  webPrograming: [{
       title: '과제 #5  (5, 6주차)',
       desc: [
         '과제 내용은 첨부파일 및 과제05 참고 동영상 참고하세요.',
@@ -73,8 +67,7 @@ module.exports = {
       ]
     }
   ],
-  discreteMathematics: [
-    {
+  discreteMathematics: [{
       title: '4주차 연습문제',
       desc: ['수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다.']
     },
@@ -83,8 +76,7 @@ module.exports = {
       desc: ['수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다.']
     }
   ],
-  probabilityAndStatistics: [
-    {
+  probabilityAndStatistics: [{
       title: '3 - 벡터 연습문제',
       desc: ['수업시간에 배운 개념 요점정리와 알려준 연습문제를 풀어서 제출합니다.']
     },

@@ -1,12 +1,12 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
 const app = express();
-const PORT = 6050;
-const lms = require('provider/lms');
+const lms = require("./provider/lms");
+const { PORT } = require("./config/env");
 
 app.use(cors());
 app.use(express.json());
-app.use('/api/lms', lms);
+app.use("/api/lms", lms);
 
 app.listen(PORT, () => {
   console.log(`server running on PORT ${PORT}`);
