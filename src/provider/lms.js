@@ -4,58 +4,67 @@ const router = express.Router();
 /** load LMS API */
 const action = require("../actions/lms.action.js");
 
-router.post("/generateTaskList", async (req, res) => {
-  const result = await action.generateTaskList(req.body);
+/** error handler */
+const catchAsync = fn => (req, res, next) => fn(req, res, next).catch(next);
+
+router.post("/generateTaskList", catchAsync(async (req, res) => {
+  const result = action.generateTaskList(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/deleteTaskList", async (req, res) => {
-  const result = await action.deleteTaskList(req.body);
+router.post("/deleteTaskList", catchAsync(async (req, res) => {
+  const result = action.deleteTaskList(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/getTaskList", async (req, res) => {
+router.post("/destoryTaskList", catchAsync(async (req, res) => {
+  const result = action.destoryTaskList(req.body);
+
+  res.send(result);
+}));
+
+router.post("/getTaskList", catchAsync(async (req, res) => {
   const result = await action.getTaskList(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/getAllTaskList", async (req, res) => {
+router.post("/getAllTaskList", catchAsync(async (req, res) => {
   const result = await action.getAllTaskList(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/getResolvedTaskList", async (req, res) => {
+router.post("/getResolvedTaskList", catchAsync(async (req, res) => {
   const result = await action.getResolvedTaskList(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/saveTaskList", async (req, res) => {
+router.post("/saveTaskList", catchAsync(async (req, res) => {
   const result = action.saveTaskList(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/submitTask", async (req, res) => {
+router.post("/submitTask", catchAsync(async (req, res) => {
   const result = action.submitTask(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/writeTaskContent", async (req, res) => {
+router.post("/writeTaskContent", catchAsync(async (req, res) => {
   const result = action.writeTaskContent(req.body);
 
   res.send(result);
-});
+}));
 
-router.post("/checkDuplicateTableName", async (req, res) => {
+router.post("/checkDuplicateTableName", catchAsync(async (req, res) => {
   const result = await action.checkDuplicateTableName(req.body);
 
   res.send(result);
-});
+}));
 
 module.exports = router;
