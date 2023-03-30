@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon ./src/server.js"
+    "server": "nodemon ./src/server"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,6 @@
     "fs": "^0.0.1-security",
     "lodash": "^4.17.15",
     "mysql": "2.17.1",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.4"
   }
 }
