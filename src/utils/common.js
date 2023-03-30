@@ -26,15 +26,15 @@ module.exports = {
     return `${date}${onlyDate ? "" : " " + time}`;
   },
 
-  saveFile: (storedList, location) => {
-    fs.writeFileSync(
+  saveFile: async (storedList, location) => {
+    await fs.writeFileSync(
       location,
       JSON.stringify(storedList, null, 2),
       env.fileEncoding
     );
   },
 
-  getStoredList: (location) => {
-    return JSON.parse(fs.readFileSync(location, env.fileEncoding));
+  getStoredList: async (location) => {
+    return await JSON.parse(fs.readFileSync(location, env.fileEncoding));
   },
 };

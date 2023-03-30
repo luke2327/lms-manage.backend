@@ -50,92 +50,92 @@ module.exports = {
     return result;
   },
 
-  deleteTaskList: ({
+  deleteTaskList: async ({
     currentTaskTableKey
   }) => {
-    const storedList = util.getStoredList(lmsListLocation);
+    const storedList = await util.getStoredList(lmsListLocation);
 
     delete storedList[currentTaskTableKey];
 
-    util.saveFile(storedList, lmsListLocation);
+    await util.saveFile(storedList, lmsListLocation);
   },
 
-  destoryTaskList: () => {
-    util.saveFile({}, lmsListLocation);
+  destoryTaskList: async () => {
+    await util.saveFile({}, lmsListLocation);
 
     return 'success';
   },
 
-  getAllTaskList: () => {
-    return JSON.parse(fs.readFileSync(lmsListLocation, env.fileEncoding));
+  getAllTaskList: async () => {
+    return await JSON.parse(fs.readFileSync(lmsListLocation, env.fileEncoding));
   },
 
-  getTaskList: ({
+  getTaskList: async ({
     currentTaskTableKey,
     searchKey,
     searchWord
   }) => {
-    const storedList = util.getStoredList(lmsListLocation);
+    const storedList = await util.getStoredList(lmsListLocation);
 
-    return storedList[currentTaskTableKey]["table"].filter((v) =>
+    return await storedList[currentTaskTableKey]["table"].filter((v) =>
       searchKey && searchWord ?
       v.taskStatus === false && v[searchKey].includes(searchWord) :
       v.taskStatus === false
     );
   },
 
-  getResolvedTaskList: ({
+  getResolvedTaskList: async ({
     currentTaskTableKey,
     searchKey,
     searchWord
   }) => {
-    const storedList = util.getStoredList(lmsListLocation);
+    const storedList = await util.getStoredList(lmsListLocation);
 
-    return storedList[currentTaskTableKey]["table"].filter((v) =>
+    return await storedList[currentTaskTableKey]["table"].filter((v) =>
       searchKey && searchWord ?
       v.taskStatus === true && v[searchKey].includes(searchWord) :
       v.taskStatus === true
     );
   },
 
-  saveTaskList: ({
+  saveTaskList: async ({
     tableName,
     data
   }) => {
-    const storedList = util.getStoredList(lmsListLocation);
+    const storedList = await util.getStoredList(lmsListLocation);
 
     storedList[tableName] = {};
     storedList[tableName]["table"] = data;
     storedList[tableName]["createdAt"] = util.formatedTimestamp();
 
-    util.saveFile(storedList, lmsListLocation);
+    await util.saveFile(storedList, lmsListLocation);
   },
 
-  submitTask: ({
+  submitTask: async ({
     key,
     currentTaskTableKey
   }) => {
-    const storedList = util.getStoredList(lmsListLocation);
+    const storedList = await util.getStoredList(lmsListLocation);
 
     storedList[currentTaskTableKey]["table"].find(
       (v) => v.key === key
     ).taskStatus = true;
 
-    util.saveFile(storedList, lmsListLocation);
+    await util.saveFile(storedList, lmsListLocation);
   },
 
-  writeTaskContent: ({
+  writeTaskContent: async ({
     key,
     currentTaskTableKey,
     taskContent
   }) => {
-    const storedList = util.getStoredList(lmsListLocation);
+    const storedList = await util.getStoredList(lmsListLocation);
 
     storedList[currentTaskTableKey]["table"].find(
       (v) => v.key === key
     ).taskContent = taskContent;
 
-    util.saveFile(storedList, lmsListLocation);
+    await util.saveFile(storedList, lmsListLocation);
   },
 
   checkDuplicateTableName: ({
