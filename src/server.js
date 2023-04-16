@@ -3,14 +3,15 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'));
-});
 const lms = require("./provider/lms");
 const {
   PORT
 } = require("./config/env");
 
+app.use(express.static('public'))
+app.get('/', (req, res) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+});
 app.use(cors());
 app.use(express.json());
 app.use("/api/lms", lms);
